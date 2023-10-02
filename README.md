@@ -5,7 +5,7 @@ The four concentric circles with different colors represent different units of t
 ## Plan
 My inspiration comes from the planetary trajectory, that's a periodic movement. So I drew a sketch first based on 24 hours(1 day).
 
-! [Sketch](./clock.jpg)
+![Sketch](./clock.jpg)
 
 Here are my next step:
 ⋅⋅1. Draw the tracks in the center of the canvas and draw four circles with different radius. These circles serve as tracks for the animated balls.
