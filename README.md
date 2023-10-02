@@ -1,60 +1,16 @@
-# p5.js Template
+## Summary
+This code is used to calculate angles (in radians) corresponding to the current time (seconds, minutes, hours, and days) repeatedly which can be an abstract clock.
+The four concentric circles with different colors represent different units of time (seconds, minutes, hours, and days).
 
-This is a README file that can be used to describe and document your assignment.
+## Plan
+My inspiration comes from the planetary trajectory, that's a periodic movement. So I drew a sketch first based on 24 hours(1 day).
 
-Markdown Cheatsheet (from [https://www.markdownguide.org/cheat-sheet/](https://www.markdownguide.org/cheat-sheet/)):
+! [Sketch](./clock.jpg)
 
----
----
+Here are my next step:
+⋅⋅1. Draw the tracks in the center of the canvas and draw four circles with different radius. These circles serve as tracks for the animated balls.
+⋅⋅2. Set the time values using map() function to convert time-related values into angles in radians.
+⋅⋅3. Draw animated balls with different size and color changing. The circle() function is used to draw a ball at a specific position on the track, which corresponds to the current time.
 
-# Heading1
-## Heading2
-### Heading3
-#### Heading4
-##### Heading5
-###### Heading6
-
-**bold text**
-
-*italicized text*
-
-~~strikethrough text~~
-
-Ordered List:
-1. First item
-2. Second item
-3. Third item
-
-Unordered List:
-- First item
-- Second item
-- Third item
-
-`short code block`
-
-```
-extended code block
-fun() {
-  return 0
-}
-```
-
-Link:  
-[linked text](https://www.example.com)
-
-
-Image with url:  
-![image description](https://dm-gy-6063-2023f-d.github.io/assets/homework/02/clark-espaco-modulado-00.jpg)
-
-
-Image on repo:  
-![image description](./file-name.jpg)
-
-
-To start a new line, add two spaces at the end of a line, like this:  
-this is a new line.
-
-
-To start a new paragraph, leave an empty line between two lines of text.
-
-This is a new paragraph.
+## Hard & Fun
+I researched the radians (half pi - two pi), this is the most difficult part for me to connect the time value to the radians(how to set the time values). And after that, I found without color, these balls cannot be differentiate by only size, so I decided to add the ball's color which is interpolated between two colors (`fromX` and `toX`) based on a time-related value (`sc`, `mc`, `hc`, or `dc`). It is more obvious to see the units differences now.
